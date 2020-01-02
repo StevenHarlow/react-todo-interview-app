@@ -36,9 +36,7 @@ export default class App extends Component {
   }
 
   deleteTask = (taskTodelete) => {
-    this.setState((prevState) => ({
-      tasks: prevState.tasks.filter((task) => taskTodelete !== task)
-    }))
+    //TODO: Implement this
   }
 
   whatTodo = () => {
@@ -69,8 +67,8 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        <Create 
-        onSubmit={this.onSubmit} 
+        <Create
+        onSubmit={this.onSubmit}
         />
         { this.state.tasks.length > 0 ?
           <Guess
